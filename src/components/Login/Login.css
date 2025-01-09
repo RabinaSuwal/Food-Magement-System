@@ -1,85 +1,65 @@
-form{
-    margin: 0 auto;
-    width: 30%;
-    height: auto;
-
-}
-
-.box{
-    margin: 20px;
-    border: 1px solid #2f0404;
-    padding: 30px;
-    border-radius: 10px;
-}
-
-.para{
-    text-align: end;
-     */
-    margin: 25px;
-}
-
-.input-icon-container{
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.input-icon{
-    position: relative;
-    width: fit-content;
-}
-
-.input-icon input{
-    width: 100%;
-    padding-left: 10px;
-    padding-right: 40px;
-    border-radius: 5px;
-}
-
-.input-icon i{
+.login-popup{
     position: absolute;
-    right: 10px;
-    top: 25%;
-    transform: translate(-50%);
-
-}
-
-/* icon{
-    display: flex;
-    padding-left:50px ;
-} */
-
-.inputbtn{
-    display:flex;
+    z-index: 1;
     width: 100%;
-    margin: 7px 0 ;
+    height: 100%;
+    background-color: #00000090;
+    display: grid;
 }
-
-.para1{
-    display:flex;
-    justify-content:center;
-    align-items:center;
+.login-popup-container{
+    place-self: center;
+    width: 330px;
+    color: #808080;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+    gap: 25px;
+    animation: fadeIn 0.5s;
 }
-
-.input-button{
-    padding: 5px;
-    margin: 2px;
-    border-radius: 5px;
-
+.login-popup-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
 }
-
 .cross{
-    float: right;
+    width: 16px;
     cursor: pointer;
 }
-
-.pw-section{
+.login-popup-inputs{
     display: flex;
-    justify-content: space-between; 
+    flex-direction: column;
+    gap: 20px;
 }
-
-.input-field input{
-    border-radius: 5px;
-    padding: 2px;
+.login-popup-inputs input{
+    outline: none;
+    border: 1px solid #c9c9c9;
+    padding: 10px;
+    border-radius: 4px;
+}
+.login-popup-container button{
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+    background-color: tomato;
+    font-size: 15px;
+    cursor: pointer;
+}
+.login-popup-condition{
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    margin-top: -15px;
+}
+.login-popup-condition input{
+    margin-top: 5px;
+}
+.login-popup p span{
+    color: tomato;
+    font-weight: 500;
+    cursor: pointer;
 }

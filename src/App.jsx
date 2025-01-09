@@ -12,7 +12,7 @@ function App() {
   const[showLogin, setShowLogin] = useState(false)
   return (
     <>
-    {showLogin?<Login/>:<></>}
+    {showLogin?<Login setShowLogin={setShowLogin}/>:<></>}
     <div>
         <Navbar setShowLogin={setShowLogin}/>
         <Routes>
