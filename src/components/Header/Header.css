@@ -1,0 +1,82 @@
+.header{
+    background-color: black ;
+    color: white;
+}
+.header-container{
+    display: flex;
+    padding: 250px 0px;
+}
+.header-contents{
+    animation: fadeIn 3s;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    max-width: 55%;
+
+}
+.header-contents h6{
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #bf9444;
+    line-height: 1.625rem;
+    font-family: "Jost",sans-serif;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.header-contents h1{
+    font-size: 74px;
+    font-weight: 700;
+    color: #fff;
+    font-family: "Cormorant Garamond",serif;
+    line-height: 1.1;
+    margin-bottom: 35px;
+}
+.header-contents p{
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #fff;
+    font-family: "Jost",sans-serif;
+    margin-bottom: 55px;
+}
+.button{
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #bf9444;
+    background-color: transparent;
+    border-radius: 50px;
+    border: 1px solid;
+    border-color: #bf9444;
+    display: inline-block;
+    z-index: 2;
+    transition: all .3s ease;
+    position: relative;
+    overflow: hidden;
+    padding: 13px 23px;
+}
+.header-right{
+    position: relative;
+    margin-top: 50px;
+}
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+.img-2{
+    padding: 0 15px;
+}
+.img-3{
+    padding: 0 15px;
+    position: absolute;
+    left: 328px;
+    top: 3px;
+}
+.img-4{
+    position: absolute;
+    left: 180px;
+    top: -150px;
+}
+.img-5{
+    position: absolute;
+    left: 165px;
+    top: 156px;
+}

@@ -1,0 +1,85 @@
+form{
+    margin: 0 auto;
+    width: 30%;
+    height: auto;
+
+}
+
+.box{
+    margin: 20px;
+    border: 1px solid #2f0404;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.para{
+    text-align: end;
+     */
+    margin: 25px;
+}
+
+.input-icon-container{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input-icon{
+    position: relative;
+    width: fit-content;
+}
+
+.input-icon input{
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 40px;
+    border-radius: 5px;
+}
+
+.input-icon i{
+    position: absolute;
+    right: 10px;
+    top: 25%;
+    transform: translate(-50%);
+
+}
+
+/* icon{
+    display: flex;
+    padding-left:50px ;
+} */
+
+.inputbtn{
+    display:flex;
+    width: 100%;
+    margin: 7px 0 ;
+}
+
+.para1{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.input-button{
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+
+}
+
+.cross{
+    float: right;
+    cursor: pointer;
+}
+
+.pw-section{
+    display: flex;
+    justify-content: space-between; 
+}
+
+.input-field input{
+    border-radius: 5px;
+    padding: 2px;
+}
