@@ -4,7 +4,7 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <div className='footer'>
+    <div className='footer' id='footer'>
       {/* <img src="https://restho-nextjs.vercel.app/_next/static/media/footer-bg.2200077c.png" alt="" /> */}
       <div className="footer-content">
         <div className="footer-content-left">

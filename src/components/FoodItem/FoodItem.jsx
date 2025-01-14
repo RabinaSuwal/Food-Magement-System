@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaRegStar, FaStar } from "react-icons/fa";
+import { IoIosRemove, IoMdAdd } from "react-icons/io";
+import { StoreContext } from '../../context/StoreContext';
 import "./FoodItem.css";
 
 function FoodItem({id,name,price,description,image,rating}) {
+
+  const{cartItems,addToCart,removeFromCart} = useContext(StoreContext);
 
   const renderStars = () => {
     const stars = [];
@@ -20,6 +24,16 @@ function FoodItem({id,name,price,description,image,rating}) {
     <div className='food-item'>
       <div className='food-item-img-container'>
         <img src={image} alt="food-item" className='food-item-image' />
+        
+        {!cartItems[id]
+        ?<IoMdAdd className='add' onClick={()=>addToCart(id)}/>
+        :<div className='food-item-counter'>
+          <IoIosRemove onClick={()=>removeFromCart(id)}/>
+          <p>{cartItems[id]}</p>
+          <IoMdAdd onClick={()=>addToCart(id)}/>
+        </div>
+          
+        }
       
       </div>
       <div className='food-item-info'>
