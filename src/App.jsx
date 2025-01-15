@@ -22,9 +22,6 @@ function App() {
         </Routes>
         
     </div>
-    {/* <Routes>
-        <Route path="/login" element={<Login />} />
-      </Routes> */}
       <Footer/>
     </>
   )
