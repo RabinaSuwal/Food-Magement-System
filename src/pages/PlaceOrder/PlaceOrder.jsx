@@ -1,11 +1,23 @@
-/** @format */
-
 import React, { useContext } from "react";
+import { ToastContainer, toast } from 'react-toastify';
 import { StoreContext } from "../../context/StoreContext";
 import "./PlaceOrder.css";
 
 function PlaceOrder() {
-  const {getTotalCartAmount} = useContext(StoreContext)
+  const { getTotalCartAmount } = useContext(StoreContext);
+
+  const isLoggedIn = true;
+
+  const notifyLogin = () => toast("Please login first!");
+  const notifySuccess = () => toast("Payment Successful!");
+
+  const handlePayment = () => {
+    if (!isLoggedIn) {
+      notifyLogin();
+    } else {
+      notifySuccess();
+    }
+  };
 
   return (
     <div className="container">
@@ -32,26 +44,27 @@ function PlaceOrder() {
           <div className="cart-total">
             <h2>Cart Total</h2>
             <div>
-            <div className="cart-total-details">
-              <p>Subtotal</p>
-              <p>${getTotalCartAmount()}</p>
+              <div className="cart-total-details">
+                <p>Subtotal</p>
+                <p>${getTotalCartAmount()}</p>
+              </div>
+              <div className="cart-total-details">
+                <p>Delivery fee</p>
+                <p>${getTotalCartAmount() === 0 ? 0 : 2}</p>
+              </div>
+              <hr />
+              <div className="cart-total-details">
+                <b>Total</b>
+                <b>${getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2}</b>
+              </div>
             </div>
-            <div className="cart-total-details">
-              <p>Delivery fee</p>
-              <p>${getTotalCartAmount()===0?0:2}</p>
-            </div>
-            <hr />
-            <div className="cart-total-details">
-              <b>Total</b>
-              <b>${getTotalCartAmount()===0?0:getTotalCartAmount()+2}</b>
-            </div>
-            </div>
-            <button>
+            <button type="button" onClick={handlePayment}>
               PROCEED TO PAYMENT
             </button>
           </div>
         </div>
       </form>
+      <ToastContainer />
     </div>
   );
 }
