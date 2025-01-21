@@ -4,7 +4,7 @@
 }
 .header-container{
     display: flex;
-    padding: 250px 0px;
+    padding: 250px 0px 100px;
 }
 .header-contents{
     animation: fadeIn 3s;
@@ -58,7 +58,7 @@
     margin-top: 50px;
 }
 .img-fluid{
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
 }
 .img-2{
@@ -67,16 +67,64 @@
 .img-3{
     padding: 0 15px;
     position: absolute;
-    left: 328px;
+    left: 266px;
     top: 3px;
 }
 .img-4{
     position: absolute;
-    left: 180px;
-    top: -150px;
+    left: 135px;
+    top: -142px;
 }
 .img-5{
     position: absolute;
-    left: 165px;
-    top: 156px;
+    left: 134px;
+    top: 118px;
+}
+
+@media (max-width:1050px) {
+    .header{
+        height: 60vw;
+    }
+    .header-container{
+        padding: 150px 0px;
+    }
+    .header-contents{
+        max-width: 100%;
+    }
+    .img-fluid{
+        display: none;
+    }
+}
+
+@media (max-width:900px) {
+    .header-contents h6{
+        font-size: 1rem;
+    }
+    .header-contents h1{
+        font-size: 60px;
+    }
+    .header-contents p{
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width:750px) {
+    .header-contents h6{
+        font-size: 0.75rem;
+    }
+    .header-contents h1{
+        font-size: 50px;
+    }
+    .button{
+        display: none;
+    }
+}
+
+@media (max-width:480px) {
+    .header-contents h6{
+        font-size: 0.75rem;
+    }
+    .header-contents h1{
+        font-size: 30px;
+    }
 }
