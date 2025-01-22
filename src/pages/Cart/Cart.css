@@ -81,3 +81,11 @@
     color: white;
     border-radius: 4px;
 }
+
+@media (max-width:750px) {
+    .cart-bottom{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+}

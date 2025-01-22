@@ -108,12 +108,18 @@
     }
 }
 
-@media (max-width:750px) {
+@media (max-width:780px) {
+    .header-container{
+        padding: 120px 0px;
+    }
     .header-contents h6{
         font-size: 0.75rem;
     }
     .header-contents h1{
-        font-size: 50px;
+        font-size: 42px;
+    }
+    .header-contents p{
+        font-size: 1rem;
     }
     .button{
         display: none;
@@ -121,10 +127,14 @@
 }
 
 @media (max-width:480px) {
+    
     .header-contents h6{
         font-size: 0.75rem;
     }
     .header-contents h1{
         font-size: 30px;
+    }
+    .header-contents p{
+        display: none;
     }
 }
